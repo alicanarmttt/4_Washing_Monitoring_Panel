@@ -18,7 +18,7 @@ namespace SmartEye2
     {
         Form2OptinScale form2OptionScale = new Form2OptinScale();
         
-        private FormOptions formOption;
+       
         private Form2OptinScale form2OptinScale;
         Size formSize;
         private int BorderSize = 2;
