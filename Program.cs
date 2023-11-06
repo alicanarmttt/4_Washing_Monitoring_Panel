@@ -14,9 +14,12 @@ namespace SmartEye2
         [STAThread]
         static void Main()
         {
+
+            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
-        }
-    }
+            SmartEye2 smartEye2 = new SmartEye2();
+            Application.Run(new SmartEye2());
+        }  
+    }   
 }

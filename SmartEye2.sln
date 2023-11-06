@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartEye2", "SmartEye2.csproj", "{D5BC6D93-6211-4D4B-8DAE-6C53463A6714}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartEYE2", "SmartEYE2.csproj", "{D5BC6D93-6211-4D4B-8DAE-6C53463A6714}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
