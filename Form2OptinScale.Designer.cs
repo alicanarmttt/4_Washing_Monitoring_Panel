@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2OptinScale));
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel31 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
@@ -144,11 +143,6 @@
             this.circularProgressBar3 = new CircularProgressBar.CircularProgressBar();
             this.panel41 = new System.Windows.Forms.Panel();
             this.pictureBox33 = new System.Windows.Forms.PictureBox();
-            this.PanelTitleBar = new System.Windows.Forms.Panel();
-            this.BtnWindowMax = new System.Windows.Forms.PictureBox();
-            this.BtnWindowLow = new System.Windows.Forms.PictureBox();
-            this.BtnWindowHide = new System.Windows.Forms.PictureBox();
-            this.BtnWindowExit = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel31.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -224,11 +218,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).BeginInit();
             this.panel41.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).BeginInit();
-            this.PanelTitleBar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BtnWindowMax)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BtnWindowLow)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BtnWindowHide)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BtnWindowExit)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -245,7 +234,7 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1650, 653);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1673, 653);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // panel31
@@ -1719,10 +1708,9 @@
             this.panel41.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel41.Location = new System.Drawing.Point(1451, 3);
             this.panel41.Name = "panel41";
-            this.panel41.Size = new System.Drawing.Size(156, 757);
+            this.panel41.Size = new System.Drawing.Size(133, 757);
             this.panel41.TabIndex = 14;
             this.panel41.Visible = false;
-            this.panel41.Paint += new System.Windows.Forms.PaintEventHandler(this.panel41_Paint);
             // 
             // pictureBox33
             // 
@@ -1734,77 +1722,12 @@
             this.pictureBox33.TabIndex = 3;
             this.pictureBox33.TabStop = false;
             // 
-            // PanelTitleBar
-            // 
-            this.PanelTitleBar.AutoScroll = true;
-            this.PanelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(208)))), ((int)(((byte)(240)))));
-            this.PanelTitleBar.Controls.Add(this.BtnWindowMax);
-            this.PanelTitleBar.Controls.Add(this.BtnWindowLow);
-            this.PanelTitleBar.Controls.Add(this.BtnWindowHide);
-            this.PanelTitleBar.Controls.Add(this.BtnWindowExit);
-            this.PanelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelTitleBar.Location = new System.Drawing.Point(0, 0);
-            this.PanelTitleBar.Margin = new System.Windows.Forms.Padding(2);
-            this.PanelTitleBar.Name = "PanelTitleBar";
-            this.PanelTitleBar.Size = new System.Drawing.Size(1650, 30);
-            this.PanelTitleBar.TabIndex = 11;
-            // 
-            // BtnWindowMax
-            // 
-            this.BtnWindowMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnWindowMax.Image = ((System.Drawing.Image)(resources.GetObject("BtnWindowMax.Image")));
-            this.BtnWindowMax.Location = new System.Drawing.Point(1608, 6);
-            this.BtnWindowMax.Margin = new System.Windows.Forms.Padding(2);
-            this.BtnWindowMax.Name = "BtnWindowMax";
-            this.BtnWindowMax.Size = new System.Drawing.Size(16, 15);
-            this.BtnWindowMax.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.BtnWindowMax.TabIndex = 2;
-            this.BtnWindowMax.TabStop = false;
-            // 
-            // BtnWindowLow
-            // 
-            this.BtnWindowLow.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnWindowLow.Image = ((System.Drawing.Image)(resources.GetObject("BtnWindowLow.Image")));
-            this.BtnWindowLow.Location = new System.Drawing.Point(1608, 6);
-            this.BtnWindowLow.Margin = new System.Windows.Forms.Padding(2);
-            this.BtnWindowLow.Name = "BtnWindowLow";
-            this.BtnWindowLow.Size = new System.Drawing.Size(16, 15);
-            this.BtnWindowLow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.BtnWindowLow.TabIndex = 1;
-            this.BtnWindowLow.TabStop = false;
-            this.BtnWindowLow.Visible = false;
-            // 
-            // BtnWindowHide
-            // 
-            this.BtnWindowHide.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnWindowHide.Image = ((System.Drawing.Image)(resources.GetObject("BtnWindowHide.Image")));
-            this.BtnWindowHide.Location = new System.Drawing.Point(1587, 6);
-            this.BtnWindowHide.Margin = new System.Windows.Forms.Padding(2);
-            this.BtnWindowHide.Name = "BtnWindowHide";
-            this.BtnWindowHide.Size = new System.Drawing.Size(17, 15);
-            this.BtnWindowHide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.BtnWindowHide.TabIndex = 0;
-            this.BtnWindowHide.TabStop = false;
-            // 
-            // BtnWindowExit
-            // 
-            this.BtnWindowExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnWindowExit.Image = ((System.Drawing.Image)(resources.GetObject("BtnWindowExit.Image")));
-            this.BtnWindowExit.Location = new System.Drawing.Point(1629, 6);
-            this.BtnWindowExit.Margin = new System.Windows.Forms.Padding(2);
-            this.BtnWindowExit.Name = "BtnWindowExit";
-            this.BtnWindowExit.Size = new System.Drawing.Size(16, 15);
-            this.BtnWindowExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.BtnWindowExit.TabIndex = 0;
-            this.BtnWindowExit.TabStop = false;
-            // 
             // Form2OptinScale
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.AutoScroll = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1650, 653);
-            this.Controls.Add(this.PanelTitleBar);
+            this.ClientSize = new System.Drawing.Size(1673, 653);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "Form2OptinScale";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1918,11 +1841,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).EndInit();
             this.panel41.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).EndInit();
-            this.PanelTitleBar.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.BtnWindowMax)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BtnWindowLow)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BtnWindowHide)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BtnWindowExit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1959,11 +1877,6 @@
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.PictureBox pictureBox32;
         private CircularProgressBar.CircularProgressBar circularProgressBar4;
-        private System.Windows.Forms.Panel PanelTitleBar;
-        private System.Windows.Forms.PictureBox BtnWindowMax;
-        private System.Windows.Forms.PictureBox BtnWindowLow;
-        private System.Windows.Forms.PictureBox BtnWindowHide;
-        private System.Windows.Forms.PictureBox BtnWindowExit;
         private System.Windows.Forms.Panel panelmain;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel2;

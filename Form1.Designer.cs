@@ -80,12 +80,13 @@ namespace SmartEye2
             this.PanelMenu.Controls.Add(this.BtnCanlı);
             this.PanelMenu.Controls.Add(this.panel2);
             this.PanelMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.PanelMenu.Location = new System.Drawing.Point(0, 0);
+            this.PanelMenu.Location = new System.Drawing.Point(0, 48);
             this.PanelMenu.Margin = new System.Windows.Forms.Padding(2);
             this.PanelMenu.Name = "PanelMenu";
-            this.PanelMenu.Size = new System.Drawing.Size(305, 882);
+            this.PanelMenu.Size = new System.Drawing.Size(305, 797);
             this.PanelMenu.TabIndex = 1;
             this.PanelMenu.SizeChanged += new System.EventHandler(this.PanelMenu_SizeChanged);
+            this.PanelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelMenu_Paint);
             this.PanelMenu.MouseEnter += new System.EventHandler(this.PanelMenu_MouseEnter);
             this.PanelMenu.MouseLeave += new System.EventHandler(this.PanelMenu_MouseLeave);
             // 
@@ -99,7 +100,7 @@ namespace SmartEye2
             this.BtnCıkıs.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnCıkıs.Image = global::SmartEye2.Properties.Resources.trick;
             this.BtnCıkıs.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnCıkıs.Location = new System.Drawing.Point(0, 787);
+            this.BtnCıkıs.Location = new System.Drawing.Point(0, 702);
             this.BtnCıkıs.Margin = new System.Windows.Forms.Padding(2);
             this.BtnCıkıs.Name = "BtnCıkıs";
             this.BtnCıkıs.Padding = new System.Windows.Forms.Padding(12, 0, 0, 19);
@@ -120,7 +121,7 @@ namespace SmartEye2
             this.BtnAyar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnAyar.Image = global::SmartEye2.Properties.Resources.gear;
             this.BtnAyar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnAyar.Location = new System.Drawing.Point(0, 619);
+            this.BtnAyar.Location = new System.Drawing.Point(0, 612);
             this.BtnAyar.Margin = new System.Windows.Forms.Padding(2);
             this.BtnAyar.Name = "BtnAyar";
             this.BtnAyar.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
@@ -143,7 +144,7 @@ namespace SmartEye2
             this.BtnRapor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnRapor.Image = global::SmartEye2.Properties.Resources.report;
             this.BtnRapor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnRapor.Location = new System.Drawing.Point(0, 519);
+            this.BtnRapor.Location = new System.Drawing.Point(0, 512);
             this.BtnRapor.Margin = new System.Windows.Forms.Padding(2);
             this.BtnRapor.Name = "BtnRapor";
             this.BtnRapor.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
@@ -165,7 +166,7 @@ namespace SmartEye2
             this.BtnArsiv.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnArsiv.Image = global::SmartEye2.Properties.Resources.archive;
             this.BtnArsiv.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnArsiv.Location = new System.Drawing.Point(0, 437);
+            this.BtnArsiv.Location = new System.Drawing.Point(0, 430);
             this.BtnArsiv.Margin = new System.Windows.Forms.Padding(2);
             this.BtnArsiv.Name = "BtnArsiv";
             this.BtnArsiv.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
@@ -188,7 +189,7 @@ namespace SmartEye2
             this.BtnIs.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnIs.Image = global::SmartEye2.Properties.Resources.trick1;
             this.BtnIs.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnIs.Location = new System.Drawing.Point(0, 355);
+            this.BtnIs.Location = new System.Drawing.Point(0, 348);
             this.BtnIs.Margin = new System.Windows.Forms.Padding(2);
             this.BtnIs.Name = "BtnIs";
             this.BtnIs.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
@@ -211,7 +212,7 @@ namespace SmartEye2
             this.BtnRecete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnRecete.Image = global::SmartEye2.Properties.Resources.bill;
             this.BtnRecete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnRecete.Location = new System.Drawing.Point(0, 260);
+            this.BtnRecete.Location = new System.Drawing.Point(0, 253);
             this.BtnRecete.Margin = new System.Windows.Forms.Padding(2);
             this.BtnRecete.Name = "BtnRecete";
             this.BtnRecete.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
@@ -234,7 +235,7 @@ namespace SmartEye2
             this.BtnCanlı.ForeColor = System.Drawing.Color.Black;
             this.BtnCanlı.Image = global::SmartEye2.Properties.Resources.live;
             this.BtnCanlı.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnCanlı.Location = new System.Drawing.Point(0, 168);
+            this.BtnCanlı.Location = new System.Drawing.Point(0, 161);
             this.BtnCanlı.Margin = new System.Windows.Forms.Padding(2);
             this.BtnCanlı.Name = "BtnCanlı";
             this.BtnCanlı.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
@@ -256,13 +257,13 @@ namespace SmartEye2
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(305, 168);
+            this.panel2.Size = new System.Drawing.Size(305, 161);
             this.panel2.TabIndex = 1;
             // 
             // BtnMenuKapa
             // 
             this.BtnMenuKapa.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
-            this.BtnMenuKapa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(208)))), ((int)(((byte)(240)))));
+            this.BtnMenuKapa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(236)))), ((int)(((byte)(252)))));
             this.BtnMenuKapa.Image = global::SmartEye2.Properties.Resources.washing_machine;
             this.BtnMenuKapa.Location = new System.Drawing.Point(241, 0);
             this.BtnMenuKapa.Margin = new System.Windows.Forms.Padding(2);
@@ -289,10 +290,10 @@ namespace SmartEye2
             // PictureBoxTolkar
             // 
             this.PictureBoxTolkar.Image = global::SmartEye2.Properties.Resources.tolkar_removebg_preview;
-            this.PictureBoxTolkar.Location = new System.Drawing.Point(-19, 52);
+            this.PictureBoxTolkar.Location = new System.Drawing.Point(0, 18);
             this.PictureBoxTolkar.Margin = new System.Windows.Forms.Padding(2);
             this.PictureBoxTolkar.Name = "PictureBoxTolkar";
-            this.PictureBoxTolkar.Size = new System.Drawing.Size(323, 160);
+            this.PictureBoxTolkar.Size = new System.Drawing.Size(322, 163);
             this.PictureBoxTolkar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PictureBoxTolkar.TabIndex = 0;
             this.PictureBoxTolkar.TabStop = false;
@@ -307,10 +308,10 @@ namespace SmartEye2
             this.PanelTitleBar.Controls.Add(this.BtnWindowMax);
             this.PanelTitleBar.Controls.Add(this.BtnWindowExit);
             this.PanelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelTitleBar.Location = new System.Drawing.Point(305, 0);
+            this.PanelTitleBar.Location = new System.Drawing.Point(0, 0);
             this.PanelTitleBar.Margin = new System.Windows.Forms.Padding(2);
             this.PanelTitleBar.Name = "PanelTitleBar";
-            this.PanelTitleBar.Size = new System.Drawing.Size(1293, 48);
+            this.PanelTitleBar.Size = new System.Drawing.Size(1540, 48);
             this.PanelTitleBar.TabIndex = 3;
             this.PanelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelTitleBar_MouseDown);
             this.PanelTitleBar.Resize += new System.EventHandler(this.PanelTitleBar_Resize_1);
@@ -319,7 +320,7 @@ namespace SmartEye2
             // 
             this.BtnWindowLow.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnWindowLow.Image = ((System.Drawing.Image)(resources.GetObject("BtnWindowLow.Image")));
-            this.BtnWindowLow.Location = new System.Drawing.Point(1226, 10);
+            this.BtnWindowLow.Location = new System.Drawing.Point(1474, 10);
             this.BtnWindowLow.Margin = new System.Windows.Forms.Padding(2);
             this.BtnWindowLow.Name = "BtnWindowLow";
             this.BtnWindowLow.Size = new System.Drawing.Size(25, 24);
@@ -332,7 +333,7 @@ namespace SmartEye2
             // 
             this.BtnWindowHide.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnWindowHide.Image = ((System.Drawing.Image)(resources.GetObject("BtnWindowHide.Image")));
-            this.BtnWindowHide.Location = new System.Drawing.Point(1193, 10);
+            this.BtnWindowHide.Location = new System.Drawing.Point(1440, 10);
             this.BtnWindowHide.Margin = new System.Windows.Forms.Padding(2);
             this.BtnWindowHide.Name = "BtnWindowHide";
             this.BtnWindowHide.Size = new System.Drawing.Size(26, 24);
@@ -345,7 +346,7 @@ namespace SmartEye2
             // 
             this.BtnWindowMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnWindowMax.Image = ((System.Drawing.Image)(resources.GetObject("BtnWindowMax.Image")));
-            this.BtnWindowMax.Location = new System.Drawing.Point(1226, 10);
+            this.BtnWindowMax.Location = new System.Drawing.Point(1474, 10);
             this.BtnWindowMax.Margin = new System.Windows.Forms.Padding(2);
             this.BtnWindowMax.Name = "BtnWindowMax";
             this.BtnWindowMax.Size = new System.Drawing.Size(25, 24);
@@ -359,7 +360,7 @@ namespace SmartEye2
             // 
             this.BtnWindowExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnWindowExit.Image = ((System.Drawing.Image)(resources.GetObject("BtnWindowExit.Image")));
-            this.BtnWindowExit.Location = new System.Drawing.Point(1259, 10);
+            this.BtnWindowExit.Location = new System.Drawing.Point(1506, 10);
             this.BtnWindowExit.Margin = new System.Windows.Forms.Padding(2);
             this.BtnWindowExit.Name = "BtnWindowExit";
             this.BtnWindowExit.Size = new System.Drawing.Size(25, 24);
@@ -375,10 +376,10 @@ namespace SmartEye2
             this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(305, 0);
+            this.panel1.Location = new System.Drawing.Point(305, 48);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1293, 882);
+            this.panel1.Size = new System.Drawing.Size(1235, 797);
             this.panel1.TabIndex = 2;
             // 
             // seDropDownMenu1
@@ -430,12 +431,12 @@ namespace SmartEye2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(1598, 882);
-            this.Controls.Add(this.PanelTitleBar);
+            this.ClientSize = new System.Drawing.Size(1540, 845);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.PanelMenu);
+            this.Controls.Add(this.PanelTitleBar);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.MinimumSize = new System.Drawing.Size(706, 547);
+            this.MinimumSize = new System.Drawing.Size(706, 545);
             this.Name = "SmartEye2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SmartEye2";

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -99,9 +100,6 @@ namespace SmartEye2
             BtnWindowMax.Visible = false;
             BtnWindowLow.Visible = true;
         }
-
-
-
 
         ////Overridden Methods
         ////Close the title bar but keep the drag to top for fullscreen ability"
@@ -350,7 +348,7 @@ namespace SmartEye2
             panel1.Controls.Clear();
             panel1.Controls.Add(formOptions); // Panel kontrolüne Form2'yi ekler
             formOptions.Show(); // Form2'yi göster
-
+         
 
         }
 
@@ -427,6 +425,15 @@ namespace SmartEye2
         {
             panel1Uzunluk();
         }
+        public void optionSize()
+        {
+            
+        }
+
+        private void PanelMenu_Paint(object sender, PaintEventArgs e)
+        {
+           
+        }    
     }
 }
 
