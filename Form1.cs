@@ -325,7 +325,7 @@ namespace SmartEye2
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            //WndProc();
             Form2OptinScale form2OptinScale = new Form2OptinScale();
             form2OptinScale.TopLevel = false;// Form2'nin bir ana pencere olmadığını belirtir
             form2OptinScale.FormBorderStyle = FormBorderStyle.None; // Sınırsız kenarlıksız form
@@ -409,11 +409,11 @@ namespace SmartEye2
             //Tek panel gözüktüğünde, yan menü küçülürse formu daralt.
             if (PanelMenu.Width < 180)
             {
-                this.MinimumSize = new Size(500, this.Height);
+                this.MinimumSize = new Size(490, this.Height);
             }
             else if(PanelMenu.Width>300)
             {
-                this.MinimumSize = new Size(706, 875);
+                this.MinimumSize = new Size(675, 875);
             }
             //    //bool isExpandedNow = (PanelMenu.Width > 200); // Yan menü genişken true, dar iken false döner
 

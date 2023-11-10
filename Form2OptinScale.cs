@@ -206,7 +206,7 @@ namespace SmartEye2
             
             if (anaFormGenislik >= yarimGenislik * 0.75 && anaFormGenislik < yarimGenislik)
             {
-                flowLayoutPanel1.Padding = new Padding((flowLayoutPanel1.Padding.Left + (frm.PanelMenu.Width / 3)), 40, 0, 0);
+                flowLayoutPanel1.Padding = new Padding((flowLayoutPanel1.Padding.Left + (frm.PanelMenu.Width / 4)), 40, 0, 0);
                 foreach (Control control in flowLayoutPanel1.Controls)
                 {
                     
@@ -247,7 +247,7 @@ namespace SmartEye2
                     {
                         Panel panel = (Panel)control;
                         // Eski margin değerlerini kullan
-                        panel.Margin = new Padding(10, 40, 2, 2);
+                        panel.Margin = new Padding(10, 40, 10, 2);
                         
 
                     }
@@ -279,7 +279,7 @@ namespace SmartEye2
                     {
                         Panel panel = (Panel)control;
                         // Eski margin değerlerini kullan
-                        panel.Margin = new Padding(10, 40, 2, 2);
+                        panel.Margin = new Padding(10, 40, 10, 2);
 
 
                     }
