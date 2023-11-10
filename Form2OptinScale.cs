@@ -28,9 +28,19 @@ namespace SmartEye2
 
         private void Form2OptinScale_Load(object sender, EventArgs e)
         {
+            //form2 Yüklendiğinde ana form tam ekran ise panelleri ortada tut. Değilse padding = 0.
             SmartEye2 frm = SmartEye2.Instance;
-            frm.MinimumSize = new Size(0, 0);
-            flowLayoutPanel1.Padding = new Padding(0, 0, 0, 0);
+            if (frm.WindowState == FormWindowState.Maximized)
+            {
+                flowLayoutPanel1.Padding = new Padding(0, 0, 0, 0);
+            }
+            
+            //SmartEye2 frm = SmartEye2.Instance;
+            //int minWidth = 1400; // Minimum genişlik değerini ayarlayın
+            //int minHeight = 800; // Minimum yükseklik değerini ayarlayın
+            //frm.MinimumSize = new Size(minWidth, minHeight);
+            //frm.MinimumSize = new Size(0, 0);
+            //flowLayoutPanel1.Padding = new Padding(0, 0, 0, 0);
         }
         
         //[DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
@@ -157,41 +167,80 @@ namespace SmartEye2
         //}
         private void PanelArasıBosluk()
         {
+            SmartEye2 frm = SmartEye2.Instance;
             int screenWidth = Screen.PrimaryScreen.Bounds.Width;
             int yarimGenislik = screenWidth / 2;
+            int anaFormGenislik = frm.Width;
 
-            if (this.Width <= yarimGenislik)
+
+            //0 - 25 arası aralarını aç tek tek gözüksün.
+            //if (yarimGenislik - (yarimGenislik / 2) > frm.Width && frm.Width>0)
+            //{
+            //    panel31.Margin = new Padding(panel31.Margin.Left + 5, panel31.Margin.Top, panel31.Margin.Right, panel31.Margin.Bottom);
+            //    panelmain.Margin = new Padding(panelmain.Margin.Left + 5, panelmain.Margin.Top, panelmain.Margin.Right, panelmain.Margin.Bottom);
+            //    panel21.Margin = new Padding(panel21.Margin.Left + 5, panel21.Margin.Top, panel21.Margin.Right, panel21.Margin.Bottom);
+            //    panel11.Margin = new Padding(panel11.Margin.Left + 5, panel11.Margin.Top, panel11.Margin.Right, panel11.Margin.Bottom);
+            //}
+
+
+
+            //0.375'ten küçük olduğu durumlarda
+            if (anaFormGenislik <= yarimGenislik * 0.75)
             {
-                
-                // Ekran 0-50 arası
+                flowLayoutPanel1.Padding = new Padding(0, 0, 0, 0);
                 foreach (Control control in flowLayoutPanel1.Controls)
                 {
-                    
-                   
+
                     if (control is Panel)
                     {
                         Panel panel = (Panel)control;
                         // Top değerini 2'ye düşür
-                        panel.Margin = new Padding(0, 80, 2, 2);
+                        panel.Margin = new Padding(2, 120, 2, 2);
+
+                    }
+
+                }
+            }
+            // Ekran 0.375-0.500 arası ise bu şartlar
+            //Padding yan menüye oranla sağa kaysın( tek panel boşluğu ortalıyor)
+            
+            if (anaFormGenislik >= yarimGenislik * 0.75 && anaFormGenislik < yarimGenislik)
+            {
+                flowLayoutPanel1.Padding = new Padding((flowLayoutPanel1.Padding.Left + (frm.PanelMenu.Width / 3)), 40, 0, 0);
+                foreach (Control control in flowLayoutPanel1.Controls)
+                {
+                    
+                    if (control is Panel)
+                    {
+                        Panel panel = (Panel)control;
+                        // Top değerini 2'ye düşür
+                        panel.Margin = new Padding(2, 0, 2, 2);
                         
                     }
                     
                 }
                 
-        
             }
-            //0-25 arası aralarını aç tek tek gözüksün.
-            if(yarimGenislik - (yarimGenislik/2)>this.Width)
-            {
-                panel31.Margin = new Padding(panel31.Margin.Left, panel31.Margin.Top + 40, panel31.Margin.Right, panel31.Margin.Bottom);
-                panelmain.Margin = new Padding(panelmain.Margin.Left, panelmain.Margin.Top + 90, panelmain.Margin.Right, panelmain.Margin.Bottom);
-                panel21.Margin = new Padding(panel21.Margin.Left, panel21.Margin.Top + 90, panel21.Margin.Right, panel21.Margin.Bottom);
-                panel11.Margin = new Padding(panel11.Margin.Left, panel11.Margin.Top + 90, panel11.Margin.Right, panel11.Margin.Bottom);
+            
+            
+            // Ekran 50-75 arası
+            if (((screenWidth - (yarimGenislik / 2)) >= anaFormGenislik && anaFormGenislik >= yarimGenislik))
+            {  
+                foreach (Control control in flowLayoutPanel1.Controls)
+                {
+                    if (control is Panel)
+                    {
+                        Panel panel = (Panel)control;
+                        // Eski margin değerlerini kullan
+                        panel.Margin = new Padding(2, 40, 2, 2);
+
+                    }
+                }
             }
 
-            if (((yarimGenislik / 2) + yarimGenislik) <= this.Width && this.Width < screenWidth)
+            // Ekran 75-100 arası
+            else if (((yarimGenislik / 2) + yarimGenislik) <= anaFormGenislik && anaFormGenislik < screenWidth)
             {
-                // Ekran 75-100 arası
                 foreach (Control control in flowLayoutPanel1.Controls)
                 {
                     if (control is Panel)
@@ -199,21 +248,7 @@ namespace SmartEye2
                         Panel panel = (Panel)control;
                         // Eski margin değerlerini kullan
                         panel.Margin = new Padding(10, 40, 2, 2);
-
-                    }
-                }
-
-            }
-            else if (((screenWidth - (yarimGenislik / 2)) >= this.Width && this.Width >= yarimGenislik))
-            {
-                // Ekran 50-75 arası
-                foreach (Control control in flowLayoutPanel1.Controls)
-                {
-                    if (control is Panel)
-                    {
-                        Panel panel = (Panel)control;
-                        // Eski margin değerlerini kullan
-                        panel.Margin = new Padding(5, 40, 2, 2);
+                        
 
                     }
                 }
@@ -222,14 +257,36 @@ namespace SmartEye2
 
         private void Form2OptinScale_SizeChanged(object sender, EventArgs e)
         {
+            SmartEye2 frm = SmartEye2.Instance;
+            int screenWidth = Screen.PrimaryScreen.Bounds.Width;
+            int yarimGenislik = screenWidth / 2;
+            int anaFormGenislik = frm.Width;
+            //form büyüklüğüne göre içerideki panellerin yerleşimi için flow panelin paddinglerini ayarlıyoruz.
+            
+
+            if (frm.WindowState == FormWindowState.Normal)
+            {
+
+                flowLayoutPanel1.Padding = new Padding(0, 0, 0, 0);
+                
+            }
+            else if(frm.WindowState == FormWindowState.Maximized && anaFormGenislik > yarimGenislik)
+            {
+                flowLayoutPanel1.Padding = new Padding(90, 80, 0, 0);
+                flowLayoutPanel1.Width +=0;
+                if (frm.PanelMenu.Width < 200)
+                {
+                    flowLayoutPanel1.Padding = new Padding((flowLayoutPanel1.Padding.Left + (frm.PanelMenu.Width)),80,0,0);
+                }
+            }
+
             //UpdatePanelSize();
             PanelArasıBosluk();
-
         }
-
+        //Panel köşeleri için siyah çizimler.
         private void panel31_Paint(object sender, PaintEventArgs e)
         {
-            //Paint event handler for your Panel
+            
 
             if (panel31.BorderStyle == BorderStyle.FixedSingle)
             {
@@ -297,29 +354,29 @@ namespace SmartEye2
             }
         }
         
-        public void UpdateForm2PanelVisibility()
-        {
-            try
-            {
-                SmartEye2 frm = SmartEye2.Instance; //instance ile form1 i bağlamış olduk
-                if (frm.WindowState == FormWindowState.Maximized && frm.PanelMenu.Width < 120)
-                {
-                    // Form1 tam ekran durumundayken ve yan menü daraldığındas Form2'deki paneli görünür yapın
-                    panel41.Visible = true;
-                }
-                else
-                {
-                    panel41.Visible = false; // Aksi takdirde Form2'deki paneli gizle
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message.ToString());
-            }
+        //public void UpdateForm2PanelVisibility()
+        //{
+        //    try
+        //    {
+        //        SmartEye2 frm = SmartEye2.Instance; //instance ile form1 i bağlamış olduk
+        //        if (frm.WindowState == FormWindowState.Maximized && frm.PanelMenu.Width < 120)
+        //        {
+        //            // Form1 tam ekran durumundayken ve yan menü daraldığındas Form2'deki paneli görünür yapın
+        //            panel41.Visible = true;
+        //        }
+        //        else
+        //        {
+        //            panel41.Visible = false; // Aksi takdirde Form2'deki paneli gizle
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show(ex.Message.ToString());
+        //    }
 
 
 
-        }
+        //}
 
         ////public void UpdatePanelSize()
         ////{

@@ -141,8 +141,6 @@
             this.label24 = new System.Windows.Forms.Label();
             this.pictureBox24 = new System.Windows.Forms.PictureBox();
             this.circularProgressBar3 = new CircularProgressBar.CircularProgressBar();
-            this.panel41 = new System.Windows.Forms.Panel();
-            this.pictureBox33 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel31.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -216,8 +214,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
             this.panel30.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).BeginInit();
-            this.panel41.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -225,27 +221,28 @@
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.AutoSize = true;
             this.flowLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.flowLayoutPanel1.Controls.Add(this.panel31);
             this.flowLayoutPanel1.Controls.Add(this.panelmain);
             this.flowLayoutPanel1.Controls.Add(this.panel11);
             this.flowLayoutPanel1.Controls.Add(this.panel21);
-            this.flowLayoutPanel1.Controls.Add(this.panel41);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1673, 653);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1673, 673);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // panel31
             // 
+            this.panel31.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel31.AutoScroll = true;
             this.panel31.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel31.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel31.Controls.Add(this.tableLayoutPanel4);
             this.panel31.Controls.Add(this.circularProgressBar4);
             this.panel31.Location = new System.Drawing.Point(20, 40);
-            this.panel31.Margin = new System.Windows.Forms.Padding(20, 40, 2, 2);
+            this.panel31.Margin = new System.Windows.Forms.Padding(20, 40, 0, 0);
             this.panel31.Name = "panel31";
             this.panel31.Size = new System.Drawing.Size(340, 721);
             this.panel31.TabIndex = 10;
@@ -605,13 +602,14 @@
             // 
             // panelmain
             // 
+            this.panelmain.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelmain.AutoScroll = true;
             this.panelmain.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panelmain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelmain.Controls.Add(this.tableLayoutPanel1);
             this.panelmain.Controls.Add(this.circularProgressBar1);
-            this.panelmain.Location = new System.Drawing.Point(382, 40);
-            this.panelmain.Margin = new System.Windows.Forms.Padding(20, 40, 2, 2);
+            this.panelmain.Location = new System.Drawing.Point(380, 40);
+            this.panelmain.Margin = new System.Windows.Forms.Padding(20, 40, 0, 0);
             this.panelmain.Name = "panelmain";
             this.panelmain.Size = new System.Drawing.Size(340, 721);
             this.panelmain.TabIndex = 11;
@@ -971,13 +969,14 @@
             // 
             // panel11
             // 
+            this.panel11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel11.AutoScroll = true;
             this.panel11.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel11.Controls.Add(this.tableLayoutPanel2);
             this.panel11.Controls.Add(this.circularProgressBar2);
-            this.panel11.Location = new System.Drawing.Point(744, 40);
-            this.panel11.Margin = new System.Windows.Forms.Padding(20, 40, 2, 2);
+            this.panel11.Location = new System.Drawing.Point(740, 40);
+            this.panel11.Margin = new System.Windows.Forms.Padding(20, 40, 0, 0);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(340, 721);
             this.panel11.TabIndex = 12;
@@ -1303,7 +1302,6 @@
             // 
             // circularProgressBar2
             // 
-            this.circularProgressBar2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.circularProgressBar2.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
             this.circularProgressBar2.AnimationSpeed = 500;
             this.circularProgressBar2.BackColor = System.Drawing.Color.Transparent;
@@ -1337,13 +1335,14 @@
             // 
             // panel21
             // 
+            this.panel21.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel21.AutoScroll = true;
             this.panel21.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel21.Controls.Add(this.tableLayoutPanel3);
             this.panel21.Controls.Add(this.circularProgressBar3);
-            this.panel21.Location = new System.Drawing.Point(1106, 40);
-            this.panel21.Margin = new System.Windows.Forms.Padding(20, 40, 2, 2);
+            this.panel21.Location = new System.Drawing.Point(1100, 40);
+            this.panel21.Margin = new System.Windows.Forms.Padding(20, 40, 0, 0);
             this.panel21.Name = "panel21";
             this.panel21.Size = new System.Drawing.Size(340, 721);
             this.panel21.TabIndex = 13;
@@ -1701,37 +1700,15 @@
             this.circularProgressBar3.TextMargin = new System.Windows.Forms.Padding(0);
             this.circularProgressBar3.Value = 60;
             // 
-            // panel41
-            // 
-            this.panel41.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(208)))), ((int)(((byte)(240)))));
-            this.panel41.Controls.Add(this.pictureBox33);
-            this.panel41.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel41.Location = new System.Drawing.Point(1451, 3);
-            this.panel41.Name = "panel41";
-            this.panel41.Size = new System.Drawing.Size(133, 757);
-            this.panel41.TabIndex = 14;
-            this.panel41.Visible = false;
-            // 
-            // pictureBox33
-            // 
-            this.pictureBox33.Image = global::SmartEye2.Properties.Resources.SmartEYE;
-            this.pictureBox33.Location = new System.Drawing.Point(7, 103);
-            this.pictureBox33.Name = "pictureBox33";
-            this.pictureBox33.Size = new System.Drawing.Size(100, 432);
-            this.pictureBox33.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox33.TabIndex = 3;
-            this.pictureBox33.TabStop = false;
-            // 
             // Form2OptinScale
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.AutoScroll = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1673, 653);
+            this.ClientSize = new System.Drawing.Size(1673, 673);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "Form2OptinScale";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form2OptinScale";
             this.Load += new System.EventHandler(this.Form2OptinScale_Load);
             this.SizeChanged += new System.EventHandler(this.Form2OptinScale_SizeChanged);
             this.flowLayoutPanel1.ResumeLayout(false);
@@ -1839,8 +1816,6 @@
             this.panel30.ResumeLayout(false);
             this.panel30.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).EndInit();
-            this.panel41.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1961,7 +1936,5 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.PictureBox pictureBox24;
         private CircularProgressBar.CircularProgressBar circularProgressBar3;
-        private System.Windows.Forms.Panel panel41;
-        private System.Windows.Forms.PictureBox pictureBox33;
     }
 }

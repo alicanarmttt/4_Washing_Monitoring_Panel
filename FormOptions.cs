@@ -26,8 +26,8 @@ namespace SmartEye2
             FormOptions formOptions = new FormOptions();
             SmartEye2 frm = SmartEye2.Instance;
 
-            int minWidth = 1400; // Minimum genişlik değerini ayarlayın
-            int minHeight = 800; // Minimum yükseklik değerini ayarlayın
+            int minWidth = 700; // Minimum genişlik değerini ayarlayın
+            int minHeight = 700; // Minimum yükseklik değerini ayarlayın
             frm.MinimumSize = new Size(minWidth, minHeight);
         }
          

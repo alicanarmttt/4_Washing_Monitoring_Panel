@@ -18,16 +18,19 @@ namespace SmartEye2
     public partial class SmartEye2 : Form
     {
         Form2OptinScale form2OptionScale = new Form2OptinScale();
+
         
-       
-        private Form2OptinScale form2OptinScale;
+        public Form2OptinScale form2OptinScale;
         Size formSize;
         private int BorderSize = 2;
         public bool isPanelMenuExpanded = true;
         public bool isSideMenuExpanded = true;
         static SmartEye2 _obj;
-        
 
+        public static void Panel1Control()
+        {
+            
+        }
         public static SmartEye2 Instance
         {
             get
@@ -114,10 +117,7 @@ namespace SmartEye2
         //}
 
         //Pencere boyut değişikliğinde başlık çubuğunun boyutunu düzenler.
-        private void PanelTitleBar_Resize(object sender, EventArgs e)
-        {
-            AdjustForm();
-        }
+    
         private void AdjustForm()
         {
             switch (this.WindowState)
@@ -326,6 +326,7 @@ namespace SmartEye2
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
             Form2OptinScale form2OptinScale = new Form2OptinScale();
             form2OptinScale.TopLevel = false;// Form2'nin bir ana pencere olmadığını belirtir
             form2OptinScale.FormBorderStyle = FormBorderStyle.None; // Sınırsız kenarlıksız form
@@ -334,7 +335,7 @@ namespace SmartEye2
             panel1.Controls.Add(form2OptinScale); // Panel kontrolüne Form2'yi ekler
             //form2OptionScale.Owner = this;
             form2OptinScale.Show(); // Form2'yi göster
-
+           
         }
 
 
@@ -360,11 +361,6 @@ namespace SmartEye2
        
 
         
-
-        private void seDropDownMenu1_Opening_1(object sender, CancelEventArgs e)
-        {
-
-        }
 
         private void BtnArsiv_Click(object sender, EventArgs e)
         {
@@ -398,25 +394,38 @@ namespace SmartEye2
                 form2OptinScale.FormBorderStyle = FormBorderStyle.None; // Sınırsız kenarlıksız form
                 form2OptinScale.Dock = DockStyle.Fill; // Form2'nin Panel'i doldurmasını sağlar
                 panel1.Controls.Clear();
-                panel1.Controls.Add(form2OptinScale); // Panel kontrolüne Form2'yi ekler
-                                                      //form2OptionScale.Owner = this;
+                panel1.Controls.Add(form2OptinScale); // Panel kontrolüne Form2'yi ekler                                        
                 form2OptinScale.Show(); // Form2'yi göster
-
+               
+                //SmartEye2 frm = SmartEye2.Instance;
+                //int minWidth = 700; // Minimum genişlik değerini ayarlayın
+                //int minHeight = 700; // Minimum yükseklik değerini ayarlayın
+                //frm.MinimumSize = new Size(minWidth, minHeight);
             }
+            
         }
 
         private void PanelMenu_SizeChanged(object sender, EventArgs e)
         {
-            //bool isExpandedNow = (PanelMenu.Width > 200); // Yan menü genişken true, dar iken false döner
+            //Tek panel gözüktüğünde, yan menü küçülürse formu daralt.
+            if (PanelMenu.Width < 180)
+            {
+                this.MinimumSize = new Size(500, this.Height);
+            }
+            else if(PanelMenu.Width>300)
+            {
+                this.MinimumSize = new Size(706, 875);
+            }
+            //    //bool isExpandedNow = (PanelMenu.Width > 200); // Yan menü genişken true, dar iken false döner
 
-            //if (PanelMenu.Width < 200)
-            //{
-                //isSideMenuExpanded = isExpandedNow; // Yan menü durumu güncelle
-                form2OptionScale.UpdateForm2PanelVisibility(); // Form2'deki panelin görünürlüğünü güncelleyin
-            //}
+            //    //if (PanelMenu.Width < 200)
+            //    //{
+            //        //isSideMenuExpanded = isExpandedNow; // Yan menü durumu güncelle
+            //        form2OptionScale.UpdateForm2PanelVisibility(); // Form2'deki panelin görünürlüğünü güncelleyin
+            //    //}
         }
 
-        private void PanelTitleBar_Resize_1(object sender, EventArgs e)
+    private void PanelTitleBar_Resize_1(object sender, EventArgs e)
         {
             AdjustForm();
         }
@@ -424,16 +433,23 @@ namespace SmartEye2
         private void Form1_SizeChanged(object sender, EventArgs e)
         {
             panel1Uzunluk();
+            //Panel sürükle bırak yapıldığında title buttonların çalışması için.
+            //(buttonlara click olmadan görünürlükleri değişmiyordu)
+            if(this.WindowState==FormWindowState.Maximized)
+            {
+                BtnWindowMax.Visible= false;
+                BtnWindowLow.Visible = true;
+            }
+            else if(this.WindowState==FormWindowState.Normal)
+            {
+                BtnWindowLow.Visible= false;
+                BtnWindowMax.Visible= true;
+            }
         }
-        public void optionSize()
-        {
-            
-        }
+       
 
-        private void PanelMenu_Paint(object sender, PaintEventArgs e)
-        {
-           
-        }    
+        
+
     }
 }
 
