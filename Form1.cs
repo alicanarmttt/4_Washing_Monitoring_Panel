@@ -131,7 +131,6 @@ namespace SmartEye2
                     break;
             }
         }
-
         private void BtnMenuKapa_Click(object sender, EventArgs e)
         {
             isSideMenuExpanded = !isSideMenuExpanded;

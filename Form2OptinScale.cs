@@ -273,7 +273,17 @@ namespace SmartEye2
             else if(frm.WindowState == FormWindowState.Maximized && anaFormGenislik > yarimGenislik)
             {
                 flowLayoutPanel1.Padding = new Padding(90, 80, 0, 0);
-                flowLayoutPanel1.Width +=0;
+                foreach (Control control in flowLayoutPanel1.Controls)
+                {
+                    if (control is Panel)
+                    {
+                        Panel panel = (Panel)control;
+                        // Eski margin değerlerini kullan
+                        panel.Margin = new Padding(10, 40, 2, 2);
+
+
+                    }
+                }
                 if (frm.PanelMenu.Width < 200)
                 {
                     flowLayoutPanel1.Padding = new Padding((flowLayoutPanel1.Padding.Left + (frm.PanelMenu.Width)),80,0,0);
