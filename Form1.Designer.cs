@@ -50,7 +50,7 @@ namespace SmartEye2
             this.BtnWindowMax = new System.Windows.Forms.PictureBox();
             this.BtnWindowExit = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.seDropDownMenu1 = new FromControls.SEDropDownMenu(this.components);
+            this.seDropDownMenu1 = new SmartEye2.FromControls.SEDropDownMenu(this.components);
             this.tümAlanlarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.finalTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.üretimToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -390,7 +390,7 @@ namespace SmartEye2
             this.üretimToolStripMenuItem,
             this.argeTestToolStripMenuItem});
             this.seDropDownMenu1.Name = "seDropDownMenu1";
-            this.seDropDownMenu1.Size = new System.Drawing.Size(215, 144);
+            this.seDropDownMenu1.Size = new System.Drawing.Size(197, 116);
             // 
             // tümAlanlarToolStripMenuItem
             // 
@@ -398,7 +398,7 @@ namespace SmartEye2
             this.tümAlanlarToolStripMenuItem.Image = global::SmartEye2.Properties.Resources.maps;
             this.tümAlanlarToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.tümAlanlarToolStripMenuItem.Name = "tümAlanlarToolStripMenuItem";
-            this.tümAlanlarToolStripMenuItem.Size = new System.Drawing.Size(214, 28);
+            this.tümAlanlarToolStripMenuItem.Size = new System.Drawing.Size(196, 28);
             this.tümAlanlarToolStripMenuItem.Text = "Tüm Alanlar";
             // 
             // finalTestToolStripMenuItem
@@ -406,7 +406,7 @@ namespace SmartEye2
             this.finalTestToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.finalTestToolStripMenuItem.Image = global::SmartEye2.Properties.Resources.test;
             this.finalTestToolStripMenuItem.Name = "finalTestToolStripMenuItem";
-            this.finalTestToolStripMenuItem.Size = new System.Drawing.Size(214, 28);
+            this.finalTestToolStripMenuItem.Size = new System.Drawing.Size(196, 28);
             this.finalTestToolStripMenuItem.Text = "Final Test";
             // 
             // üretimToolStripMenuItem
@@ -414,7 +414,7 @@ namespace SmartEye2
             this.üretimToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.üretimToolStripMenuItem.Image = global::SmartEye2.Properties.Resources.robotic_arm__1_;
             this.üretimToolStripMenuItem.Name = "üretimToolStripMenuItem";
-            this.üretimToolStripMenuItem.Size = new System.Drawing.Size(214, 28);
+            this.üretimToolStripMenuItem.Size = new System.Drawing.Size(196, 28);
             this.üretimToolStripMenuItem.Text = "Üretim";
             // 
             // argeTestToolStripMenuItem
@@ -422,7 +422,7 @@ namespace SmartEye2
             this.argeTestToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.argeTestToolStripMenuItem.Image = global::SmartEye2.Properties.Resources.analytics;
             this.argeTestToolStripMenuItem.Name = "argeTestToolStripMenuItem";
-            this.argeTestToolStripMenuItem.Size = new System.Drawing.Size(214, 28);
+            this.argeTestToolStripMenuItem.Size = new System.Drawing.Size(196, 28);
             this.argeTestToolStripMenuItem.Text = "Arge Test Alanı";
             // 
             // SmartEye2

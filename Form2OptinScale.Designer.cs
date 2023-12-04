@@ -221,7 +221,7 @@
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.AutoSize = true;
             this.flowLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.flowLayoutPanel1.Controls.Add(this.panel31);
             this.flowLayoutPanel1.Controls.Add(this.panelmain);
             this.flowLayoutPanel1.Controls.Add(this.panel11);

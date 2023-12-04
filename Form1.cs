@@ -104,8 +104,8 @@ namespace SmartEye2
             BtnWindowLow.Visible = true;
         }
 
-        ////Overridden Methods
-        ////Close the title bar but keep the drag to top for fullscreen ability"
+        //Overridden Methods
+        //Close the title bar but keep the drag to top for fullscreen ability"
         //protected override void WndProc(ref Message m)
         //{
         //    const int WM_NCCALCSIZE = 0x0083;
@@ -117,7 +117,7 @@ namespace SmartEye2
         //}
 
         //Pencere boyut değişikliğinde başlık çubuğunun boyutunu düzenler.
-    
+
         private void AdjustForm()
         {
             switch (this.WindowState)
@@ -325,7 +325,7 @@ namespace SmartEye2
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //WndProc();
+            
             Form2OptinScale form2OptinScale = new Form2OptinScale();
             form2OptinScale.TopLevel = false;// Form2'nin bir ana pencere olmadığını belirtir
             form2OptinScale.FormBorderStyle = FormBorderStyle.None; // Sınırsız kenarlıksız form
@@ -334,7 +334,7 @@ namespace SmartEye2
             panel1.Controls.Add(form2OptinScale); // Panel kontrolüne Form2'yi ekler
             //form2OptionScale.Owner = this;
             form2OptinScale.Show(); // Form2'yi göster
-           
+            
         }
 
 
